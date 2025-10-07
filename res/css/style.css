@@ -28,7 +28,6 @@ header {
 }
 
 .game-area {
-    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,7 +36,6 @@ header {
 
 .categories {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
@@ -53,6 +51,7 @@ header {
 }
 
 .question-box {
+    display: none;
     padding: 20px;
     background: rgba(0, 0, 50, 0.8);
     border: 2px solid gold;
@@ -63,7 +62,8 @@ header {
 }
 
 .answers {
-    display: grid;
+    /*display: grid;*/
+    display: none;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
@@ -84,7 +84,8 @@ header {
 }
 
 .lifelines {
-    display: flex;
+    /*display: flex;*/
+    display: none;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
@@ -103,7 +104,7 @@ header {
 }
 
 .scoreboard {
-    flex: 1;
+    display: none;
     background: rgba(0, 0, 50, 0.9);
     border: 2px solid gold;
     border-radius: 15px;
@@ -122,4 +123,8 @@ header {
     padding: 5px 0;
     font-size: 1.1rem;
     color: gold;
+}
+
+.point {
+    background: red;
 }
