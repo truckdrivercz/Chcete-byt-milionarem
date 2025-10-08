@@ -18,6 +18,132 @@ header {
     text-shadow: 0 0 15px blue, 0 0 30px gold;
 }
 
+.top-buttons {
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.top-buttons button {
+    padding: 10px 20px;
+    background: darkblue;
+    border: 2px solid gold;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.top-buttons button:hover {
+    background: #0040ff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: rgba(0, 0, 50, 0.9);
+    border: 2px solid gold;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.form-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-tabs .tab {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    background: darkblue;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.form-tabs .tab.active {
+    background: gold;
+    color: black;
+    font-weight: bold;
+}
+
+.form-panel {
+    display: none;
+}
+
+.form-panel.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid gold;
+    background: #001a33;
+    color: white;
+}
+
+form select{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid gold;
+    background: #001a33;
+    color: white;
+}
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border: 2px solid gold;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-weight: bold;
+}
+
+.form-buttons button:hover {
+    background: #0040ff;
+}
+
+.add{
+    background: green;
+}
+
+.delete{
+    background: red;
+}
+
 .container {
   display: flex;
   flex: 1;
@@ -126,5 +252,5 @@ header {
 }
 
 .point {
-    background: red;
+    color: red;
 }

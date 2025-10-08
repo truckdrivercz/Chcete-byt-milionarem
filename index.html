@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,102 @@
     <link rel="shortcut icon" href="./res/img/logo.png" type="png">
     <title>Chcete být milionářem</title>
 </head>
+
 <body>
-    <header>Chcete být milionářem</header>
+    <header>Chcete být milionářem pro IT</header>
+
+    <div class="top-buttons">
+        <button class="open-rules">📜 Pravidla hry</button>
+        <button class="open-form">✍️ Správa otázek</button>
+    </div>
+
+    <div class="modal rules-modal">
+        <div class="modal-content">
+            <span class="close-btn close-rules">❌</span>
+            <h2>📜 Pravidla hry</h2>
+            <p>Hra <strong>Chcete být milionářem</strong> je vědomostní soutěž, ve které hráč odpovídá na otázky z
+                vybraných kategorií.</p>
+            <ul>
+                <li>Hráč postupuje po „žebříčku výher“ až k 10 000 000 Kč.</li>
+                <li>Každá otázka má <strong>4 možnosti</strong>, pouze jedna je správná.</li>
+                <li>Správná odpověď posouvá hráče na vyšší částku.</li>
+                <li>Špatná odpověď znamená konec hry, hráč si odnese nejbližší záchytný bod (10 000 Kč nebo 320 000 Kč).
+                </li>
+                <li>Čas na odpověď může být omezen (např. 30 sekund).</li>
+            </ul>
+            <h3>Nápovědy</h3>
+            <ul>
+                <li><strong>50:50</strong> – odstraní dvě nesprávné odpovědi.</li>
+                <li><strong>Telefonát</strong> – hráč může „zavolat“ o radu.</li>
+                <li><strong>Přeskočení otázky</strong> – otázka se přeskočí a zobrazí se nová.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal form-modal">
+        <div class="modal-content">
+            <span class="close-btn close-form">❌</span>
+            <h2>✍️ Správa otázek</h2>
+
+            <div class="form-tabs">
+                <button class="tab active">Přidat otázku</button>
+                <button class="tab edit-question">Upravit otázku</button>
+                <button class="tab delete-question">Smazat otázku</button>
+            </div>
+
+            <!-- Přidat otázku -->
+            <div class="form-panel active">
+                <form>
+                    <label for="category">Kategorie:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Vyber kategorii</option>
+                        <option value="sites">Počítačové sítě</option>
+                        <option value="programming">Programování</option>
+                        <option value="webDevelop">Vývoj webových stránek</option>
+                    </select>
+                    
+                    <label for="question">Otázka:</label>
+                    <input type="text" id="question" name="question" required>
+
+                    <label for="answerA">Odpověď A:</label>
+                    <input type="text" id="answerA" name="answerA" required>
+
+                    <label for="answerB">Odpověď B:</label>
+                    <input type="text" id="answerB" name="answerB" required>
+
+                    <label for="answerC">Odpověď C:</label>
+                    <input type="text" id="answerC" name="answerC" required>
+
+                    <label for="answerD">Odpověď D:</label>
+                    <input type="text" id="answerD" name="answerD" required>
+
+                    <label for="correct">Správná odpověď:</label>
+                    <select id="correct" name="correct">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+
+                    <div class="form-buttons">
+                        <button class="add" type="submit">Přidat otázku</button>
+                        <button class="delete" type="reset">Vymazat</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Upravit otázku -->
+            <div class="form-panel">
+                <p>Zde bude formulář pro <strong>úpravu otázek</strong> (napojíš na databázi).</p>
+            </div>
+
+            <!-- Smazat otázku -->
+            <div class="form-panel">
+                <p>Zde bude formulář pro <strong>mazání otázek</strong> (napojíš na databázi).</p>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container">
         <div class="game-area">
@@ -38,17 +133,17 @@
 
         <div class="scoreboard">
             <ul>
-                <li class="point">15. 10 000 000 Kč</li>
+                <li><span class="point">15. 10 000 000 Kč</span></li>
                 <li>14. 5 000 000 Kč</li>
                 <li>13. 2 500 000 Kč</li>
                 <li>12. 1 250 000 Kč</li>
                 <li>11. 640 000 Kč</li>
-                <li class="point">10. 320 000 Kč</li>
+                <li><span class="point">10. 320 000 Kč</span></li>
                 <li>9. 160 000 Kč</li>
                 <li>8. 80 000 Kč</li>
                 <li>7. 40 000 Kč</li>
                 <li>6. 20 000 Kč</li>
-                <li class="point">5. 10 000 Kč</li>
+                <li><span class="point">5. 10 000</span></li>
                 <li>4. 5 0000 Kč</li>
                 <li>3. 3 000 Kč</li>
                 <li>2. 2 000 Kč</li>
@@ -59,4 +154,5 @@
 
     <script src="./res/js/main.js"></script>
 </body>
+
 </html>
